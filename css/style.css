@@ -52,8 +52,7 @@ header {
   min-height: 100vh;
   background-image: url(../imgs/imgi_7_banner.png);
   background-repeat: no-repeat;
-  /* background-size: cover; */
-  /* background-position: center; */
+
 }
 
 /* Search Input */
