@@ -66,11 +66,7 @@ header .searchInput {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-header .searchInput:focus {
-  border-color: #09c !important;
-  box-shadow: 0 0 0 0.2rem rgba(0, 153, 204, 0.25) !important;
-  outline: none;
-}
+
 
 header .searchInput::placeholder {
   color: #6c757d !important;
