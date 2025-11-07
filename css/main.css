@@ -1,8 +1,9 @@
 body {
   background-color: #1e202b !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body,* {
+body, * {
   box-sizing: border-box;
 }
 
@@ -10,8 +11,11 @@ body,* {
   background-color: #1e202b !important;
   color: #ffffff !important;
 }
+
+/* Navigation */
 nav li a {
   color: #ffffff !important;
+  transition: color 0.3s ease;
 }
 
 .logo span {
@@ -24,44 +28,59 @@ nav li a {
   font-weight: 500;
   padding: 2px;
 }
+
 .navbar-nav li {
   padding: 0px 20px;
   border: 2px solid transparent;
   border-radius: 25px;
   margin-inline: 5px;
+  transition: border-color 0.3s ease;
 }
+
 .navbar-nav li:hover,
 .navbar-nav li:has(.active) {
-  /* Add styles for container of active link */
   border: 2px solid #09c;
 }
 
 .navbar-nav li:hover a,
 .navbar-nav li .active {
-  /* Add styles for active link */
   color: #09c !important;
 }
 
+/* Header Section */
 header {
   min-height: 100vh;
   background-image: url(../imgs/imgi_7_banner.png);
   background-repeat: no-repeat;
-}
-header .searchInput {
-  background-color: #1e202b !important;
-  color: #ffffff !important;
-  border: none !important;
-  margin-block: 70px;
+  background-size: cover;
+  background-position: center;
 }
 
-/* Add placeholder color styles */
+/* Search Input */
+header .searchInput {
+  background-color: #2b2f3a !important;
+  color: #ffffff !important;
+  border: 2px solid transparent !important;
+  margin-block: 70px;
+  padding: 12px 150px 12px 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .searchInput:focus {
+  border-color: #09c !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 153, 204, 0.25) !important;
+  outline: none;
+}
+
 header .searchInput::placeholder {
   color: #6c757d !important;
   opacity: 1;
 }
+
 header .myinput {
   position: relative;
 }
+
 header .myBtn {
   background-color: #09c !important;
   padding: 12px 40px;
@@ -73,27 +92,50 @@ header .myBtn {
   top: 50%;
   transform: translateY(-50%);
   font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+header .myBtn:hover {
+  background-color: #007399 !important;
+  transform: translateY(-50%) scale(1.05);
+}
+
+header .myBtn:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+/* Weather Container */
 .weather-container {
   background: #2b2f3a;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  /* margin: 50px auto; */
   color: white;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 50px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .weather-card {
-  /* padding: 0 2rem 2rem 2rem; */
-  /* text-align: center; */
   border-right: 1px solid #3a3f4e;
   background-color: #323544;
   margin: 0;
   padding: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .day-header {
   display: flex;
@@ -101,45 +143,85 @@ header .myBtn {
   align-items: center;
   color: #b9bbbe;
   background-color: #2d303d;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
 
-  padding: 8px;
+.weather-main .city {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .weather-main .temp {
   font-size: 5.625rem;
   font-weight: 600;
   margin: 10px 0;
+  background: linear-gradient(135deg, #09c, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
 .weather-main .details {
   display: flex;
   gap: 20px;
   font-size: 14px;
   color: #b9bbbe;
+  flex-wrap: wrap;
 }
+
+.weather-main .detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weather-main .detail img {
+  width: 24px;
+  height: 24px;
+}
+
 .other {
   background-color: #262936;
 }
+
 .other .day-header {
   background-color: #222530;
 }
+
 .icon {
- margin-bottom:15px ;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
+
 .temp {
-    font-size: 24px;
-    font-weight: 700;
-    margin-block: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-block: 5px;
 }
+
 .sub-temp {
-    font-size: 16px;
-    color:  #a1a3a4;
-    margin-bottom: 20px;
+  font-size: 16px;
+  color: #a1a3a4;
+  margin-bottom: 20px;
 }
-.condition{
+
+.condition {
   color: #09c;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 0;
 }
 
+/* Loading Spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
 
+/* Footer */
 .footer {
   background-color: #262936;
   padding: 50px 0;
@@ -152,6 +234,12 @@ header .myBtn {
   border-radius: 50px;
   overflow: hidden;
   width: 60%;
+  min-width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+
+.footer .subscribe:focus-within {
+  box-shadow: 0 0 0 0.2rem rgba(0, 153, 204, 0.25);
 }
 
 .footer .email-input {
@@ -160,6 +248,10 @@ header .myBtn {
   color: #fff;
   padding: 15px 25px;
   flex: 1;
+}
+
+.footer .email-input:focus {
+  outline: none;
 }
 
 .footer .email-input::placeholder {
@@ -173,11 +265,13 @@ header .myBtn {
   padding: 12px 35px;
   border-radius: 50px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 .footer .subscribe-btn:hover {
   background-color: #007cad;
+  transform: scale(1.05);
 }
 
 .footer .social-icons .icon {
@@ -190,19 +284,64 @@ header .myBtn {
   align-items: center;
   justify-content: center;
   margin-left: 10px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .footer .social-icons .icon:hover {
   background-color: #009ad8;
   color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 153, 204, 0.4);
 }
 
 .footer .copy {
   color: #777;
   font-size: 13px;
+  margin-top: 20px;
 }
 
 .footer .highlight {
   color: #009ad8;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .searchInput {
+    padding: 12px 120px 12px 15px;
+  }
+
+  header .myBtn {
+    padding: 10px 25px;
+    font-size: 12px;
+  }
+
+  .weather-main .temp {
+    font-size: 3.5rem;
+  }
+
+  .weather-card {
+    border-right: none;
+    border-bottom: 1px solid #3a3f4e;
+  }
+
+  .weather-card:last-child {
+    border-bottom: none;
+  }
+
+  .footer .subscribe {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .weather-main .details {
+    justify-content: center;
+  }
+
+  .navbar-nav li {
+    padding: 0px 10px;
+    margin-inline: 2px;
+  }
 }
