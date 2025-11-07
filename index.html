@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg  main-color ">
+    <div class="container p-4 ">
+      <div class="d-flex align-items-center justify-content-arou p-2 mx-5">
+        <img src="./imgs/imgi_1_logo@2x.png" width="65px" alt="logo">
+        <div class="d-flex flex-column  ms-2 logo">
+          <a class="navbar-brand text-light mb-0 fs-6 fw-bold" href="#">Weather</a>
+          <span class="text-light ">tagline goes here</span>
+        </div>
+      </div>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <ul class="navbar-nav  d-flex me-5">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Live Cameras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Photos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <header>
+    <div class="container w-75 myinput d-flex justify-content-center align-items-center">
+
+      <input type="search" id="searchInput" class="form-control searchInput rounded-5 py-3 shadow-none"
+        placeholder="Find your location..." aria-label="find Location" aria-describedby="button-addon2">
+      <button class="btn btn-outline-primary myBtn" type="button" id="button-addon2">Find</button>
+
+    </div>
+    <div class="weather-container container w-75 ">
+
+
+      <div class="row ">
+        <!-- Thursday -->
+        <div class="weather-card first col-xl-4" id="mainDay">
+          <!-- <div class="day-header">
+            <span >${dayName}</span>
+            <span id="date">6 November</span>
+          </div>
+          <div class="weather-main p-4">
+            <div class="city" id="city">Cairo</div>
+            <div class="temp" id="mainTemp">25.3°C</div>
+            <img src="./imgs/imgi_2_143.png" width="80px" alt="Clear" class="icon" id="mainIcon" />
+            <div class="condition  mb-3">Clear</div>
+
+            <div class="details">
+              <div class="detail">
+                <img src="./imgs/imgi_3_icon-umberella.png" alt="Humidity" />
+                <span>20%</span>
+              </div>
+              <div class="detail">
+                <img src="./imgs/imgi_4_icon-wind.png" alt="Wind" />
+                <span>18km/h</span>
+              </div>
+              <div class="detail">
+                <img src="./imgs/imgi_5_icon-compass.png" alt="Direction" />
+                <span>East</span>
+              </div>
+            </div> -->
+        </div>
+
+        <!-- Friday -->
+        <div class="weather-card other col-xl-4 " id="secondDay">
+          <!-- <div class="day-header d-flex justify-content-center">
+            <span class="text-center">Friday</span>
+          </div>
+          <div class="h-75 d-flex  flex-column justify-content-center align-items-center">
+            <img src="./imgs/imgi_6_113.png" width="50px" alt="Sunny" class="icon" />
+            <div class="temp small">28.2°C</div>
+            <div class="sub-temp fs-6">20.2°</div>
+            <div class="condition ">Sunny</div> -->
+        </div>
+        <!-- Saturday -->
+        <div class="weather-card last col-xl-4 " id="thirdDay">
+          <!-- <div class="day-header d-flex justify-content-center">
+            <span class="text-center">Friday</span>
+          </div>
+          <div class="h-75 d-flex  flex-column justify-content-center align-items-center">
+            <img src="./imgs/imgi_6_113.png" width="50px" alt="Sunny" class="icon" />
+            <div class="temp small">28.2°C</div>
+            <div class="sub-temp fs-6">20.2°</div>
+            <div class="condition ">Sunny</div>
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+    </div>
+
+  </header>
+
+  <footer class="footer">
+    <div class="container d-flex justify-content-around w-75 align-items-center flex-wrap">
+      <div class="subscribe d-flex">
+        <input type="email" placeholder="Enter your email to subscribe..." class="form-control email-input" />
+        <button class="btn subscribe-btn">Subscribe</button>
+      </div>
+
+      <div class="social-icons d-flex align-items-center">
+        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+        <a href="#" class="icon"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+      <div class="copy  mt-4">
+        Copyright 2014 Company name. Designed by <span class="highlight">Themezy</span>. All rights reserved
+      </div>
+    </div>
+
+
+  </footer>
+
+
+  <!-- 
+  
+  -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

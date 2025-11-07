@@ -1,0 +1,208 @@
+body {
+  background-color: #1e202b !important;
+}
+
+body,* {
+  box-sizing: border-box;
+}
+
+.main-color {
+  background-color: #1e202b !important;
+  color: #ffffff !important;
+}
+nav li a {
+  color: #ffffff !important;
+}
+
+.logo span {
+  font-size: 10px;
+  color: #c4c3c3 !important;
+}
+
+.navbar-nav li a {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2px;
+}
+.navbar-nav li {
+  padding: 0px 20px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  margin-inline: 5px;
+}
+.navbar-nav li:hover,
+.navbar-nav li:has(.active) {
+  /* Add styles for container of active link */
+  border: 2px solid #09c;
+}
+
+.navbar-nav li:hover a,
+.navbar-nav li .active {
+  /* Add styles for active link */
+  color: #09c !important;
+}
+
+header {
+  min-height: 100vh;
+  background-image: url(../imgs/imgi_7_banner.png);
+  background-repeat: no-repeat;
+}
+header .searchInput {
+  background-color: #1e202b !important;
+  color: #ffffff !important;
+  border: none !important;
+  margin-block: 70px;
+}
+
+/* Add placeholder color styles */
+header .searchInput::placeholder {
+  color: #6c757d !important;
+  opacity: 1;
+}
+header .myinput {
+  position: relative;
+}
+header .myBtn {
+  background-color: #09c !important;
+  padding: 12px 40px;
+  border-radius: 25px;
+  color: #ffffff !important;
+  border: none !important;
+  position: absolute;
+  right: 1.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+.weather-container {
+  background: #2b2f3a;
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  /* margin: 50px auto; */
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.weather-card {
+  /* padding: 0 2rem 2rem 2rem; */
+  /* text-align: center; */
+  border-right: 1px solid #3a3f4e;
+  background-color: #323544;
+  margin: 0;
+  padding: 0;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #b9bbbe;
+  background-color: #2d303d;
+
+  padding: 8px;
+}
+
+.weather-main .temp {
+  font-size: 5.625rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.weather-main .details {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #b9bbbe;
+}
+.other {
+  background-color: #262936;
+}
+.other .day-header {
+  background-color: #222530;
+}
+.icon {
+ margin-bottom:15px ;
+}
+.temp {
+    font-size: 24px;
+    font-weight: 700;
+    margin-block: 5px;
+}
+.sub-temp {
+    font-size: 16px;
+    color:  #a1a3a4;
+    margin-bottom: 20px;
+}
+.condition{
+  color: #09c;
+}
+
+
+.footer {
+  background-color: #262936;
+  padding: 50px 0;
+  color: #bfc1c8;
+  font-size: 14px;
+}
+
+.footer .subscribe {
+  background-color: #1e202b;
+  border-radius: 50px;
+  overflow: hidden;
+  width: 60%;
+}
+
+.footer .email-input {
+  border: none;
+  background: none;
+  color: #fff;
+  padding: 15px 25px;
+  flex: 1;
+}
+
+.footer .email-input::placeholder {
+  color: #777;
+}
+
+.footer .subscribe-btn {
+  background-color: #009ad8;
+  border: none;
+  color: #fff;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer .subscribe-btn:hover {
+  background-color: #007cad;
+}
+
+.footer .social-icons .icon {
+  color: #009ad8;
+  background-color: #1e202b;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.footer .social-icons .icon:hover {
+  background-color: #009ad8;
+  color: #fff;
+}
+
+.footer .copy {
+  color: #777;
+  font-size: 13px;
+}
+
+.footer .highlight {
+  color: #009ad8;
+}
