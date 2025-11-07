@@ -28,8 +28,7 @@ function handleSearch() {
   if (query) {
     currentLocation = query;
     getLocation(query);
-  } else {
-    showError("Please enter a city name");
+    
   }
 }
 
